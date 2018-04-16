@@ -692,7 +692,7 @@ y con esos cuatro se forma cada tetriminó del respectivo color*/
 						stage.removeEventListener(KeyboardEvent.KEY_UP, soltar);
 						btnBMenu.addEventListener(MouseEvent.CLICK,regresarI);
 						time.stop();
-						for (var v2: int = 0; v2 < colisiones2.length; v2++) {
+						for (var v3: int = 0; v3 < colisiones2.length; v3++) {
 							removeChild(colisiones2[v2]);
 						}
 					}else{
