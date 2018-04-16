@@ -74,7 +74,6 @@ y con esos cuatro se forma cada tetriminó del respectivo color*/
 		public function optionF(event: MouseEvent): void {
 			gotoAndStop(3);
 			btnBack2.addEventListener(MouseEvent.CLICK, backF2);
-			ayudabtn.addEventListener(MouseEvent.CLICK, ayudar);
 			btnGuardar.addEventListener(MouseEvent.CLICK,guardarF);
 		}
 
@@ -189,19 +188,9 @@ y con esos cuatro se forma cada tetriminó del respectivo color*/
 			}else{
 				nombre = txtPlayerName.text;
 			}
-			if(txtizquiera.text == "" ||txtDerecha.text == "" ||txtRota.text == "" ||txtVel.text =="" ){
-				txtAlerta2.text = "Falta por llenar!"
-			}else{
-				izqN = Number(txtizquiera.text);
-				derN = Number(txtDerecha.text);
-				abajoN = Number(txtRota.text);
-				arribaN = Number(txtVel.text);
-				txtAlerta2.text ="Listo!"
-			}
+
 		}
-		public function ayudar(e:MouseEvent):void{
-			navigateToURL(new URLRequest ("https://help.adobe.com/es_ES/AS2LCR/Flash_10.0/help.html?content=00000525.html"));
-		}
+	
 
 
 
@@ -695,6 +684,7 @@ y con esos cuatro se forma cada tetriminó del respectivo color*/
 					if(colisiones2[v2].hitTestObject(f19) || colisiones2[v2].hitTestObject(f20) || colisiones2[v2].hitTestObject(f18)){
 						gotoAndStop(5);
 						time2.stop();
+						nombregtxt.text = nombre;
 						stage.removeEventListener(Event.ENTER_FRAME,movement);
 						stage.removeEventListener(Event.ENTER_FRAME, colision);
 						stage.removeEventListener(Event.ENTER_FRAME, movement);
